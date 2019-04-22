@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Random;
@@ -27,7 +28,7 @@ public class search {
 	GridPixelChanger gpc = new GridPixelChanger();
 	checkCollisions cc = new checkCollisions();
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		// Create the RobocodeEngine
 		RobocodeEngine engine = new RobocodeEngine(new java.io.File("C:/robocode"));
 		// Run from D:/robocode
@@ -110,7 +111,9 @@ public class search {
 		MapToTxt mtxt = new MapToTxt();
 		mtxt.save("map.txt");
 	
-		
+		//TEST
+		//ReadFileTest rft = new ReadFileTest();
+		//rft.ReadFile();
 
 		/*
 		 * Create and run the battle

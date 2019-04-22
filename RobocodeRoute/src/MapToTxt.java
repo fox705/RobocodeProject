@@ -10,13 +10,12 @@ public class MapToTxt {
 
 	public void save(String fileName){
 	    String mapTxt="";
-		for (int i=0; i<path.size(); i++) {
+	    for (int i=0; i<path.size(); i++) {
 	    	mapTxt+=path.get(i).getRow()+" ";
-	    	mapTxt+=path.get(i).getCol()+" ";
-	    }
+	    	mapTxt+=path.get(i).getCol()+" ";}
 	    PrintWriter pw;
 		try {
-			pw = new PrintWriter(new FileOutputStream(fileName));
+			pw = new PrintWriter(new FileOutputStream("C:\\Users\\Micha³\\Documents\\RobocodeProject\\RobocodeRobot\\bin\\RouteBot.data\\"+fileName));
 			pw.write(mapTxt);
 		    pw.close();
 		    
